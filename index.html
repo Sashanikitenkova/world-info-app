@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>World Info APP</title>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div class="row valign-wrapper" style="margin-top: 30px;">
+          
+          <div class="input-field col s9">
+            <input type="text" id="countryInput" class="validate" placeholder="Enter the name of the country">
+          </div>
+          
+          <div class="col s3">
+            <button id="loadBtn" class="btn-flat transparent z-depth-0" type="button">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+       
+      <!-- <div id="countryInfo" style="display:none;">
+
+        <div id="countryHeader" class="valign-wrapper center-align">
+          <h5 id="countryName"></h5>
+          <img id="countryFlag" src="" alt="Flag" width="50" />
+        </div>
+
+         
+          <p><strong>Code:</strong> <span id="countryCode"></span></p>
+          <p><strong>Capital:</strong> <span id="countryCapital"></span></p>
+          <p><strong>Currency:</strong> <span id="countryCurrency"></span></p>
+          <p><strong>Language:</strong> <span id="countryLanguage"></span></p>
+          <p><strong>Continent:</strong> <span id="countryContinent"></span></p>
+      </div> -->
+
+
+     
+    </header>
+
+    <main>
+         <div id="countryInfo" class="container" style="display:none; margin-top: 30px;">
+  <div id="countryHeader" class="center-align" style="margin-bottom: 20px;">
+    <h5>Welcome to: <span id="countryName"></span></h5>
+    <img id="countryFlag" src="" alt="Flag" style="width: 60px; vertical-align: middle; margin-left: 10px;" />
+  </div>
+
+  <div class="board-wrapper z-depth-1" style="border: 3px solid #333; border-radius: 8px; background-color: #f7f7f7; padding: 15px;">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s2 center-align board-column">
+        <div class="board-label">Code</div>
+        <div class="board-value" id="countryCode"></div>
+      </div>
+      <div class="col s2 center-align board-column">
+        <div class="board-label">Capital</div>
+        <div class="board-value" id="countryCapital"></div>
+      </div>
+      <div class="col s2 center-align board-column">
+        <div class="board-label">Currency</div>
+        <div class="board-value" id="countryCurrency"></div>
+      </div>
+      <div class="col s2 center-align board-column">
+        <div class="board-label">Language</div>
+        <div class="board-value" id="countryLanguage"></div>
+      </div>
+      <div class="col s2 center-align board-column">
+        <div class="board-label">Continent</div>
+        <div class="board-value" id="countryContinent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- <img id="train" src="train.svg" alt="Train" style="display:none" /> -->
+
+      
+
+
+    </main>
+
+
+
+
+
+    
+     <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+ 

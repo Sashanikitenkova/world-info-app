@@ -11,6 +11,10 @@ $(document).ready(function() {
     const train = $('#train');
     train.removeClass('moving').show();
 
+    const sound=$('#trainSounds')[0];
+    sound.currentTime = 0;
+    sound.play();
+
     const animationDelay = isFirstClick ? 50 : 2000;
     const infoDelay = isFirstClick ? 2600 : 4200;
 
@@ -18,11 +22,17 @@ $(document).ready(function() {
       train.addClass('moving');
     }, animationDelay);
 
+    setTimeout(function() {
+      train.removeClass('moving');
+      sound.pause();
+    }, infoDelay + 3000);
+
     setTimeout(() => {
       $.ajax({
         url: `https://restcountries.com/v3.1/name/${country}`,
         method: 'GET',
         success: function (data) {
+          console.log(data);
           const countryInfo = data[0];
           
           const name = countryInfo.name.common;
